@@ -5,11 +5,11 @@
 
 ## 🚀 Tecnologias Utilizadas
 
-
+_(em breve)_
 
 ## 🛠️ Instalação
 
-
+_(em breve)_
 
 ## ✅ Funcionalidades Essenciais
 
