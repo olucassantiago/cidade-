@@ -2,6 +2,7 @@
 # 🏙️ Projeto Cidade+
 
 **Cidade+** é um aplicativo mobile voltado para facilitar o engajamento cívico entre a população e o poder público. Ele permite que os cidadãos relatem problemas urbanos do cotidiano — como buracos em vias, iluminação precária, falta de lixeiras, entre outros — e acompanhem o andamento das soluções. O foco principal é melhorar a qualidade de vida nas cidades e fortalecer a cidadania ativa, especialmente em municípios pequenos.
+![Cidade+ (1)](https://github.com/user-attachments/assets/4fee6e53-7cdc-49da-8897-0e084f2280b9)
 
 ## 🚀 Tecnologias Utilizadas
 
