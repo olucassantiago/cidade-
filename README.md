@@ -72,7 +72,7 @@
 - Sugerir instalação de lixeiras em uma via
 
 ### 🖼️ Capturas de Tela
-_(A definir)_
+_(em breve)_
 
 ### ✨ Diferencial do Cidade+
 - Foco em cidades de pequeno e médio porte
