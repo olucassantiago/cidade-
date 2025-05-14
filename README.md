@@ -6,13 +6,16 @@
 
 ## 🚀 Tecnologias Utilizadas
 
-_(em breve)_
+react 
 
 ## 🛠️ Instalação
 
 ```bash
 npm install
+```
+```bash
 npm start
+```
 
 ## ✅ Funcionalidades Essenciais
 
