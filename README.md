@@ -10,7 +10,9 @@ _(em breve)_
 
 ## 🛠️ Instalação
 
-_(em breve)_
+```bash
+npm install
+npm start
 
 ## ✅ Funcionalidades Essenciais
 
