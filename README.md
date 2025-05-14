@@ -10,9 +10,13 @@ react
 
 ## 🛠️ Instalação
 
+Para instalar as dependências, execute:
 ```bash
 npm install
 ```
+
+Depois, para iniciar a aplicação em modo de desenvolvimento:
+
 ```bash
 npm start
 ```
