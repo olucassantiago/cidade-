@@ -6,7 +6,7 @@
 
 ## 🚀 Tecnologias Utilizadas
 
-react 
+react 19.1.0
 
 ## 🛠️ Instalação
 
