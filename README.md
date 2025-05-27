@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # 🏙️ Projeto Cidade+
 
@@ -100,3 +101,55 @@ Este projeto está sendo desenvolvido por estudantes do terceiro período do Cur
 | <p align="center"> <img src="https://github.com/user-attachments/assets/083ac858-8c1d-4915-8bce-5049bb31f401" alt="Lucas" width="150"></p> <p align="center"> Lucas Santiago </p> | <p align="center"> Análise e Desenvolvimento de Sistemas </p> | <p align="center"> [Lucas Santiago](https://www.linkedin.com/in/olucassantiago/) </p> | <p align="center"> [Acesse o Github de Lucas](https://github.com/olucassantiago) </p> |
 | <p align="center"> <img src="https://github.com/user-attachments/assets/65874af9-b644-4366-b514-6492fea057e6" alt="Raphael" width="150"> </p> <p align="center"> Raphael Souza </p> | <p align="center"> Análise e Desenvolvimento de Sistemas </p> | <p align="center"> [Raphael Souza](https://www.linkedin.com/in/raphael-souza-522b48338) </p> | <p align="center"> [Acesse o Github de Raphael](https://github.com/RaphaSouza28) </p> |
 | <p align="center"> <img src="https://github.com/user-attachments/assets/6a4ce95c-4096-4a9e-9293-47b089e48977" alt="Sérgio Dias" width="150"></p> <p align="center">Sérgio Dias</p> | <p align="center"> Análise e Desenvolvimento de Sistemas </p> | <p align="center"> [Sérgio Dias](https://www.linkedin.com/in/sergio-augusto-dias-65024729a) </p> | <p align="center"> [Acesse o Github de Sérgio](https://github.com/Sergiodias130) </p> |
+=======
+# Welcome to your Expo app 👋
+
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
+## Get started
+
+1. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+2. Start the app
+
+   ```bash
+   npx expo start
+   ```
+
+In the output, you'll find options to open the app in a
+
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
+
+```bash
+npm run reset-project
+```
+
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+
+## Learn more
+
+To learn more about developing your project with Expo, look at the following resources:
+
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+
+## Join the community
+
+Join our community of developers creating universal apps.
+
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+>>>>>>> 9bd8682 (Initial commit)
