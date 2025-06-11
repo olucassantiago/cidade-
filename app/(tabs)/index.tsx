@@ -1,8 +1,6 @@
-
-import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, StyleSheet, Text, View } from 'react-native';
-//import { db } from '../../services/firebase';
+import { View, Text, FlatList, StyleSheet, ActivityIndicator } from 'react-native';
+import { buscarRelatos, criarTabela } from '../services/database';
 import RelatoCard from '../../components/ui/RelatoCard';
 
 export default function HomeScreen() {
@@ -10,16 +8,11 @@ export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const q = query(collection(db, 'relatos'), orderBy('data', 'desc'));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const data = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...(doc.data()),
-      }));
-      setRelatos(data);
+    criarTabela();
+    buscarRelatos((dados) => {
+      setRelatos(dados);
       setLoading(false);
     });
-    return () => unsubscribe();
   }, []);
 
   if (loading) {
@@ -32,17 +25,17 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Relatos</Text>
+      <Text style={styles.title}>Relatos da Comunidade</Text>
       <FlatList
         data={relatos}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <RelatoCard
             titulo={item.titulo}
             categoria={item.categoria}
             endereco={item.endereco}
             data={item.data}
-            imagem={item.fotos?.[0]}
+            imagem={JSON.parse(item.fotos)?.[0]}
           />
         )}
       />

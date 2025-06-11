@@ -1,13 +1,11 @@
-
 import * as ImagePicker from 'expo-image-picker';
-import { addDoc, collection } from 'firebase/firestore';
 import { useState } from 'react';
 import { Alert, Image, ScrollView, StyleSheet, View, Text } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-import { db } from '../../services/firebase';
-import BotaoPrincipal from '../../components/BotaoPrincipal';
-import InputTexto from '../../components/InputTexto';
-import DropdownCategorias from '../../components/DropdownCategorias';
+import { inserirRelato } from '../services/database';
+import BotaoPrincipal from '../../components/ui/BotaoPrincipal';
+import InputTexto from '../../components/ui/InputTexto';
+import DropdownCategorias from '../../components/ui/DropdownCategorias';
 
 const categorias = ['Buraco', 'Iluminação', 'Lixo', 'Outro'];
 
@@ -38,16 +36,17 @@ export default function ReportFormScreen() {
     }
 
     try {
-      await addDoc(collection(db, 'relatos'), {
+      inserirRelato({
         titulo,
         categoria,
         endereco,
-        local,
-        fotos,
         data: new Date().toISOString(),
+        latitude: local.latitude,
+        longitude: local.longitude,
+        fotos,
       });
 
-      Alert.alert('Relato enviado com sucesso!');
+      Alert.alert('Relato salvo localmente com sucesso!');
       setTitulo('');
       setCategoria('');
       setEndereco('');

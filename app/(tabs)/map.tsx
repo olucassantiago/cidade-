@@ -1,17 +1,17 @@
 import * as Location from 'expo-location';
-import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import MapView, { Callout, Marker } from 'react-native-maps';
-//import { db } from '../../services/firebase';
+import { buscarRelatos } from '../services/database';
 
 type Relato = {
-  id: string;
+  id: number;
   titulo: string;
   categoria: string;
   endereco: string;
-  local: { latitude: number; longitude: number };
-  fotos?: string[];
+  latitude: number;
+  longitude: number;
+  fotos: string;
 };
 
 const categoriasDisponiveis = ['Todos', 'Buraco', 'Iluminação', 'Lixo', 'Outro'];
@@ -23,16 +23,10 @@ export default function MapaRelatos() {
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    const unsub = onSnapshot(collection(db, 'relatos'), (snapshot) => {
-      const dados: Relato[] = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...(doc.data() as Omit<Relato, 'id'>),
-      }));
+    buscarRelatos((dados) => {
       setRelatos(dados);
       setCarregando(false);
     });
-
-    return () => unsub();
   }, []);
 
   const obterLocalizacao = async () => {
@@ -88,11 +82,15 @@ export default function MapaRelatos() {
         }}
       >
         {relatosFiltrados.map((relato) => (
-          <Marker key={relato.id} coordinate={relato.local} pinColor="#771e21">
+          <Marker
+            key={relato.id}
+            coordinate={{ latitude: relato.latitude, longitude: relato.longitude }}
+            pinColor="#771e21"
+          >
             <Callout>
               <View style={{ maxWidth: 250 }}>
-                {relato.fotos && relato.fotos[0] && (
-                  <Image source={{ uri: relato.fotos[0] }} style={styles.imagem} />
+                {relato.fotos && JSON.parse(relato.fotos)[0] && (
+                  <Image source={{ uri: JSON.parse(relato.fotos)[0] }} style={styles.imagem} />
                 )}
                 <Text style={styles.titulo}>{relato.titulo}</Text>
                 <Text>{relato.categoria}</Text>

@@ -1,10 +1,10 @@
 
 import { useRouter } from 'expo-router';
 import { ScrollView, Alert, StyleSheet, Text } from 'react-native';
-import AvatarUsuario from '../../components/AvatarUsuario';
-import InputTexto from '../../components/InputTexto';
-import BotaoPrincipal from '../../components/BotaoPrincipal';
-import BotaoSecundario from '../../components/BotaoSecundario';
+import AvatarUsuario from '../../components/ui/AvatarUsuario';
+import InputTexto from '../../components/ui/InputTexto';
+import BotaoPrincipal from '../../components/ui/BotaoPrincipal';
+import BotaoSecundario from '../../components/ui/BotaoSecundario';
 
 export default function ProfileScreen() {
   const router = useRouter();
